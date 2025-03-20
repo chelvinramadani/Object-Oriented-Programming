@@ -8,24 +8,29 @@ package com.mycompany.bangunruang;
  *
  * @author CHELVIN RAMADANI
  */
-public class Kubus {
- private final int sisi;
+public final class Kubus {
+ private int sisi;
  private int volume;
  
- public Kubus(int sisi_baru){
-     sisi = sisi_baru;
+ public Kubus(){
+     this.sisi = 0;
+ }
+ 
+ public Kubus(int sisi){
+     this.sisi = sisi;
      computeAndSetVolume();
  }
  
- private void computeAndSetVolume(){
- volume = sisi * sisi * sisi;
+ public void setSisi(int sisi){
+ this.sisi = sisi;
+  computeAndSetVolume();
+         }
+ 
+ void computeAndSetVolume(){
+ this.volume = sisi * sisi * sisi;
  }
-        
-  public int getLuas(){
-      return 6 * (sisi * sisi);
-  }  
   
     public int getVolume(){
-      return volume;
+      return this.volume;
   }
 }

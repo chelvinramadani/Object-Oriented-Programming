@@ -8,20 +8,38 @@ package com.mycompany.bangunruang;
  *
  * @author CHELVIN RAMADANI
  */
-public class Balok {
-    private final int panjang;
-    private final int lebar;
-    private final int tinggi;
-    private int volume;
+public final class Balok {
+    int panjang, lebar, tinggi, volume;
     
-    public Balok(int panjang_baru, int lebar_baru, int tinggi_baru){
-     panjang = panjang_baru;
-     lebar = lebar_baru;
-     tinggi = tinggi_baru;
+    public Balok(){
+     this.panjang = 0;
+     this.lebar = 0;
+     this.tinggi = 0;
+ }
+    
+     public Balok( int panjang, int lebar, int tinggi){
+     this.panjang = panjang;
+     this.lebar = lebar;
+     this.tinggi = tinggi;
+     computeAndSetVolume();
+ }
+     
+     public void setPanjang( int panjang){
+     this.panjang = panjang;
+     computeAndSetVolume();
+ }
+     
+     public void setLebar( int lebar){
+     this.lebar = lebar;
+     computeAndSetVolume();
+ }
+          
+     public void setTinggi( int tinggi){
+     this.tinggi = tinggi;
      computeAndSetVolume();
  }
     
-    private void computeAndSetVolume(){
+    public void computeAndSetVolume(){
     volume = panjang * lebar * tinggi;
  }
 

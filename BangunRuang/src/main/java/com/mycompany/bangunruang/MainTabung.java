@@ -10,9 +10,14 @@ package com.mycompany.bangunruang;
  */
 public class MainTabung {
     public static void main(String[] args){
-    Tabung tabung1 = new Tabung(7, 10);
+    Tabung tabung1 = new Tabung();
+    tabung1.setRadius(7);
+    tabung1.setTinggi(5);
+    
+    Tabung tabung2 = new Tabung(14, 10);
     
     System.out.println("Volume Tabung = " +tabung1.getVolume());
+    System.out.println("Volume Tabung = " +tabung2.getVolume());
     
     }
 }

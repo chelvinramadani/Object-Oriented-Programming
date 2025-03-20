@@ -8,16 +8,24 @@ package com.mycompany.bangunruang;
  *
  * @author CHELVIN RAMADANI
  */
-public class Bola {
-    private final double radius;
-    private double volume;
+public final class Bola {
+   double radius, volume;
+   
+   public Bola(){
+   this.radius = 0;
+   }
      
-    public Bola(double input_radius){
-    radius = input_radius;
+    public Bola(double radius){
+    this.radius = radius;
     computeAndSetVolume();
     }
     
-    private void computeAndSetVolume(){
+    public void setRadius(double radius){
+    this.radius = radius;
+    computeAndSetVolume();
+    }
+    
+    void computeAndSetVolume(){
     volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
  }
     

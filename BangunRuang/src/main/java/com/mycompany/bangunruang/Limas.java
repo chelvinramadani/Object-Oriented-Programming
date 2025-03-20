@@ -8,18 +8,31 @@ package com.mycompany.bangunruang;
  *
  * @author CHELVIN RAMADANI
  */
-public class Limas {
-    private final int sisi;
-    private final int tinggi;
-    private int volume;
+public final class Limas {
+    int sisi, tinggi, volume;
     
-    public Limas(int input_sisi, int input_tinggi){
-    sisi = input_sisi;
-    tinggi = input_tinggi;
+    public Limas(){
+        this.sisi = 0;
+        this.tinggi = 0;
+    }
+    
+    public Limas(int sisi, int tinggi){
+    this.sisi = sisi;
+    this.tinggi = tinggi;
     computeAndSetVolume();
  }
     
-    private void computeAndSetVolume(){
+     public void setSisi( int sisi){
+     this.sisi = sisi;
+     computeAndSetVolume();
+ }
+    
+     public void setTinggi( int tinggi){
+     this.tinggi = tinggi;
+     computeAndSetVolume();
+ }
+    
+    public void computeAndSetVolume(){
     volume = (sisi * sisi) * tinggi / 3;
  }
     

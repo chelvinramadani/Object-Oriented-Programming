@@ -8,15 +8,28 @@ package com.mycompany.bangunruang;
  *
  * @author CHELVIN RAMADANI
  */
-public class Tabung {
-    private final double radius;
-    private final double tinggi;
-    private double volume;
+public final class Tabung {
+    double radius, tinggi, volume;
+    
+    public Tabung(){
+    this.radius = 0;
+    this.tinggi = 0;
+    }
  
-    public Tabung(double input_radius, double input_tinggi){
-    radius = input_radius;
-    tinggi = input_tinggi;
+    public Tabung(double radius, double tinggi){
+    this.radius = radius;
+    this.tinggi = tinggi;
     computeAndSetVolume();
+    }
+    
+    public void setRadius(double radius){
+        this.radius = radius;
+        computeAndSetVolume();
+    }
+    
+    public void setTinggi(double tinggi){
+        this.tinggi = tinggi;
+        computeAndSetVolume();
     }
     
     private void computeAndSetVolume(){
